@@ -2,10 +2,8 @@ var main = {
     init : function () {
         var _this = this;
         $('#btn-save').on('click' , function () {
-            console.log('@@@@ click', _this.save())
             _this.save();
         })
-
     },
     save : function () {
         var data = {
@@ -13,7 +11,6 @@ var main = {
             author : $('#author').val(),
             content : $('#content').val()
         };
-
         $.ajax({
             type : 'POST',
             url : '/posts',
