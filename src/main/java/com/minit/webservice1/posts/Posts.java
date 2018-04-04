@@ -1,6 +1,5 @@
 package com.minit.webservice1.posts;
 
-
 import com.minit.webservice1.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
@@ -14,7 +13,7 @@ import javax.persistence.*;
 public class Posts extends BaseTimeEntity {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(length = 500, nullable = false)
